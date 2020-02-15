@@ -23,4 +23,13 @@ public class Dish {
   public double getPrice() {
     return price;
   }
+
+  @Override
+  public String toString() {
+    return "Dish{" +
+            "id='" + id + '\'' +
+            ", name='" + name + '\'' +
+            ", price=" + price +
+            '}';
+  }
 }
