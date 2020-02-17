@@ -17,17 +17,4 @@ public class NoneDiscount implements Discount {
     public String getName() {
         return "";
     }
-
-    public Discount bestDiscount(Order order, List<Discount> discounts) {
-        double min = this.calcPrice(order);
-        Discount minDiscount = this;
-        for (Discount discount : discounts) {
-            double totalPrice = discount.calcPrice(order);
-            if (min > totalPrice) {
-                min = totalPrice;
-                minDiscount = discount;
-            }
-        }
-        return minDiscount;
-    }
 }

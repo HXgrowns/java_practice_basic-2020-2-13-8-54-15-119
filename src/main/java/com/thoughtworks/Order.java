@@ -22,7 +22,4 @@ public class Order {
         return datas;
     }
 
-    public void setDatas(List<OrderData> datas) {
-        this.datas = datas;
-    }
 }
