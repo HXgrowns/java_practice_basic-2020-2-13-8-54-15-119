@@ -29,6 +29,6 @@ public class HalfDiscount implements Discount {
         }
         return String.format("-----------------------------------\n" +
                         "使用优惠:\n指定菜品半价(黄焖鸡，凉皮)，省%s元\n",
-                Utils.dealDoule(savePrice / 2));
+                Utils.convertDoubleToString(savePrice / 2));
     }
 }

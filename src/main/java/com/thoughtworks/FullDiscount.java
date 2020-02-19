@@ -19,6 +19,6 @@ public class FullDiscount implements Discount {
     public String getName() {
         return String.format("-----------------------------------\n" +
                         "使用优惠:\n满30减6元，省%s元\n",
-                Utils.dealDoule(savePrice));
+                Utils.convertDoubleToString(savePrice));
     }
 }

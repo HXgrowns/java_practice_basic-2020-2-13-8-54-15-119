@@ -8,10 +8,10 @@ public class OrderParser {
         List<OrderData> orderDatas = new ArrayList<>();
         String[] orderDataStrings = selectItems.split(",");
         for (String orderDataString : orderDataStrings) {
-            String[] strs = orderDataString.split(" x ");
+            String[] itemArray = orderDataString.split(" x ");
             for (Dish dish : DataProvider.getDishes()) {
-                if (dish.getId().equals(strs[0])) {
-                    OrderData orderData = new OrderData(Integer.parseInt(strs[1]), dish);
+                if (dish.getId().equals(itemArray[0])) {
+                    OrderData orderData = new OrderData(Integer.parseInt(itemArray[1]), dish);
                     orderDatas.add(orderData);
                 }
             }
